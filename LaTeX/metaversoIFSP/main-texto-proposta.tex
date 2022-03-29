@@ -123,17 +123,19 @@ WELEN MOTA SOUSA	& SP146616X \\
 
 \chapter[Introdução]{Introdução}
 
-De acordo com a PNAD de 2019 (\citeauthor{PNAD:2019}), 82,7\% dos domicílios brasileiros contam com acesso à internet.
-
-Mesmo tendo acesso de banda larga em 80,2\% dos dispositivos móveis do país, apenas 45,1\% os domicílios da amostra têm acesso via computador. Assim, entendemos que embora muitos dos usuários têm alguma fluência em aplicativos móveis, as diferenças de interfaces pode ser um desafio para o usuário que têm tarefas diferentes das desempenhadas em aplicativos móveis.
+De acordo com a PNAD de 2019 (\citeauthor{PNAD:2019}), 82,7\% dos domicílios brasileiros contam com acesso à internet. Mesmo tendo acesso de banda larga em 80,2\% dos dispositivos móveis do país, apenas 45,1\% os domicílios da amostra têm acesso via computador. Assim, entendemos que embora muitos dos usuários têm alguma fluência em aplicativos móveis, as diferenças de interfaces pode ser um desafio para o usuário que têm tarefas diferentes das desempenhadas em aplicativos móveis.
 
 Ainda, considerando que existem diversas soluções corporativas de suporte, em contraste, para esses usuários, as soluções que mais se apresentam são fóruns, que ainda que sejam gratuitas, ainda demandam algum trabalho e interação que os usuários alvo são pouco familiarizados ou têm compreensão limitados em relação à dinâmica de tais ferramentas.
 
-Assim, propomos uma ferramenta com capacidades de suportar os usuários que sentem necessidade de suporte personalizado.
+Assim, propomos uma ferramenta com capacidade de suportar os usuários que sentem necessidade de suporte personalizado.
 
 \section{Problema}
-Problema: dificuldade de resolver problemas corriqueiros incomodam ou impedem o uso esperado do dispositivo
 
+% Dificuldade em resolver problemas corriqueiros incomodam ou impedem o uso esperado do dispositivo, como um mal funcionamento de impressora e lentidão na execução de softwares, tornando sua utilização menos produtiva.
+
+Existência de potencial relevante de usuários de pouca fluência com soluções de tecnologia que têm dificuldades em resolver problemas frustantes e corriqueiros com computadores pessoais que  incomodam ou impedem o uso esperado do dispositivo por não conseguirem desfrutar do dispositivo ou, mesmo, trabalhar.
+
+\begin{comment}
 \subsection{Personas}
 Usuários finaliza com nível muito elementar de conhecimento e interação com dispositivos desktop.
 
@@ -149,7 +151,7 @@ Rafael é pai de duas crianças pequenas e trabalha o dia inteiro na rua, mas pr
 \subsubsubsection{Persona 4}
 Claudenice faz a melhor coxinha da região e é muito organizada. Os negócios estão indo muito bem e até já contratou uma contabilidade e duas pessoas para ajudar a organizar nas atividades do dia a dia. Mas, nenhuma das pessoas que contratou pode fazer algo que ela não abre mão: tomar conta das próprias finanças. Mesmo assim, vão ajuda-la a organizar as entregas e coletar os pedidos no computador. Ninguém sabe mexer muito bem no computador e isso preocupa a Claudenice, pois já ficou na mão uma vez e demorou bastante para conseguir achar alguém que ajudasse.
 
-\begin{comment}
+
 
 \chapter{Modelo de negócio}
 
@@ -177,71 +179,54 @@ A proposta inicial é a criação de uma ferramenta que favoreça a identificaç
 
 Nesse momento, o desenvolvimento de uma solução que popule e atualize a seção de perguntas frequentes e o chat automatizado é prioridade de desenvolvimento e será o principal indicador de viabilidade.
 
-\chapter{Tecnologias}
-
-\section{Modelo de trabalho}
-
-Scrum + kanban, com iterações por diárias	.
-
-\section{Infra estrutura}
-
-A definir
-
-\section{Back end}
-
-A definir
-
-\section{Front end}
-
-A definir
-
 \end{comment}
 
-\chapter{Objetivos}
 
-O projeto elaborado propõe uma solução que atenda pessoas de baixa fluência em sistemas de computação em situações cotidianas em que seus dispositivos não se comportem de acordo com o esperado pelo usuário.
+\chapter[Objetivos]{Objetivos}
 
-Entende-se que a solução tem como alvo pessoas físicas e pequenas empresas, que normalmente têm acesso limitado ou nenhum a ferramentas tradicionais de suporte de tecnologia da informação (ITMS).
+O projeto elaborado propõe uma solução que atenda pessoas com baixa fluência em sistemas de computação em situações cotidianas em que seus dispositivos não funcionem de acordo com o esperado pelo usuário.
 
-Para tanto, foram definidos os seguintes objetivos para elaboração do mínimo produto viável e suas ferramentas essenciais, com pontos de checagem (check point) para verificação do avanço da solução.
+Entende-se que a solução tem como alvo pessoas físicas e pequenas empresas, que normalmente têm acesso limitado ou nenhum a ferramentas tradicionais de suporte de tecnologia da informação (\textit{ITSM - Information Technology Service Management}).
 
-\subsection{Objetivo Principal}
+Para tanto, foram definidos os seguintes objetivos para criação do serviço: elaboração do mínimo produto viável e suas ferramentas essenciais, com pontos de checagem (\textit{check point}) para verificação do avanço da solução.
+
+\section{Objetivo Principal}
 
 Prover assistência de problemas em sistemas computacionais domésticos ou de pequenas empresas para usuários finais com pouca ou nenhuma familiaridade a problemas cotidianos.
 
-\subsection{Funcionalidades da Ferramenta de (ITSM)}
+\section{Objetivos Secundários}
 
-Para que o produto seja considerado viável, é necessário que as seguintes ferramentas sejam disponibilizadas as seguintes soluções: 
+Para que o produto de ITSM - \textit{Information Technology Service Management} seja considerado viável, será necessário que as seguintes ferramentas sejam disponibilizadas as funcionalidades a seguir: 
 
-\subsubsection{Ferramenta de FAQ - Frequently Asked Questions}
+\subsection{Ferramenta de respostas rápidas para perguntas frequentes: FAQ - \textit{Frequently Asked Questions}}
 
-Para a solução de FAQ, compreendeu-se a necessidade de desenvolvimento das ferramentas:
+	Para a solução de FAQ, compreendeu-se a necessidade de desenvolvimento das ferramentas:
+	
+	\begin{enumerate}
+		\item Modelo de árvore de decisão
+		
+		Realização de consultar em banco de dados relacional baseado em SQL - \textit{Server Query Language}, o qual localiza uma resposta de solução ao problema alegado.
+		
+		\item Tela inicial
+		
+		Implementação de ferramenta de busco para agregar na consulta otimizada afim de facilitar a procura de problemas relacionados.
+		
+		\item Adicionar Cookie de sessão para armazenar o comportamento do usuário. (verificar IP - \textit{Internet Protocol} - público e contexto LGPD - Lei Geral de Proteção de Dados)
+		
+		Armazenamento do IP público do usuário para identificar o seu comportamento no site, seguindo critérios de aceite aos termos e políticas condicionais no site, baseadas na LGPD.
+		
+		\item Cadastro no FAQ
+		
+		O cadastro no FAQ é realizado pelo próprio time da central de suporte técnico, quando identificam um novo problema que está sendo relatado com muita frequência, busca uma solução otimizada e disponibiliza no FAQ. 
+	\end{enumerate}
 
-\begin{enumerate}
-	\item Modelo de árvore de decisão
-	
-	Realização de consultar em banco de dados relacional SQL, o qual localiza uma resposta de solução ao problema alegado.
-	
-	\item Tela inicial
-	
-	Implementação de ferramenta de busco para agregar na consulto otimizada afim de facilitar a procura de problemas relacionados.
-	
-	\item Adicionar Cookie de sessão para armazenar o comportamento do usuário. (verificar IP público e contexto LGPD)
-	
-	Armazenamento do IP público do usuário para identificar o seu comportamento no site, seguindo critérios de aceite aos termos e políticas condicionais no site, baseadas na LGPD.
-	
-	\item Cadastro no FAQ
-	
-	O cadastro no FAQ é realizado pelo próprio time da central de suporte técnico, quando identificam um novo problema que está sendo relatado com muita frequência, busca uma solução otimizada e disponibiliza no FAQ. 
-\end{enumerate}
+\subsection{Login}
 
-\subsubsection{Login}
+	\begin{enumerate}
+		\item Login confiável por autorização de acesso
+	\end{enumerate}
 
-\begin{enumerate}
-	\item Login confiável com redes sociais
-\end{enumerate}
-
-\subsubsection{Cadastros}
+\subsection{Cadastros}
 
 \begin{enumerate}
 	\item Criação de cadastro de perfil
@@ -289,7 +274,7 @@ Para a solução de FAQ, compreendeu-se a necessidade de desenvolvimento das fer
 	
 \end{enumerate}
 
-\subsubsection{Agendamento de visita técnica}
+\subsection{Agendamento de visita técnica}
 
 O cliente poderá por meio de um plano especifico contratar um técnico com um perfil adequado a sua necessidade e baseado em sua avaliação.
 
@@ -305,7 +290,7 @@ O cliente poderá por meio de um plano especifico contratar um técnico com um p
 	        
 	\end{itemize}
 
-\subsubsection{Operacional}
+\subsection{Operacional}
 
 	\begin{enumerate}
 		
@@ -319,7 +304,7 @@ O cliente poderá por meio de um plano especifico contratar um técnico com um p
 		
 	\end{enumerate}
 
-\subsubsection{Planos de Compra}
+\subsection{Planos de Compra}
 
 	\begin{enumerate}
 		
@@ -337,7 +322,7 @@ O cliente poderá por meio de um plano especifico contratar um técnico com um p
 		
 	\end{enumerate}
 
-\subsubsection{Avaliação da visita técnica.}
+\subsection{Avaliação da visita técnica.}
 
 	\begin{enumerate}
 		
@@ -351,7 +336,7 @@ O cliente poderá por meio de um plano especifico contratar um técnico com um p
 		
 	\end{enumerate}
 
-\subsubsection{Modo de visualização}
+\subsection{Modo de visualização}
 
 	\begin{enumerate}
 	
@@ -365,7 +350,7 @@ O cliente poderá por meio de um plano especifico contratar um técnico com um p
 		
 	\end{enumerate}
 
-\subsubsection{Avaliação de visita técnica e clientes}
+\subsection{Avaliação de visita técnica e clientes}
 
 \begin{enumerate}
 	
@@ -382,16 +367,73 @@ O cliente poderá por meio de um plano especifico contratar um técnico com um p
 	
 	Funcionalidade de avaliação da visita técnica do cliente com critérios de nota:(1 muito pouco satisfeito, 2 pouco satisfeito, 3 regular, 4 satisfeito, 5 muito satisfeito), opção de classificar o nível de conhecimento técnico (1 nenhum conhecimento, 2 poucos conhecimento, 3 regular, 4 bons conhecimentos, 5 conhecimentos avançados).
 
+\end{enumerate}
 
-\subsubsection{Relatórios}
+\subsection{Relatórios}
 
 	\begin{enumerate}
 
 	\item Relatório de Incidentes (Classificação, gerencial, traçar perfil de recorrência de incidente e comportamento).
 	
-	Geração de relatório de incidentes de nível gerencial, com demonstração de informações de classificação, recorrência de incidentes e comportamento dos usuários do FAQ. 
+	Geração de relatório de incidentes de nível gerencial, com demonstração de informações de classificação, recorrência de incidentes e comportamento dos usuários do FAQ.
+	
+	\item Painel de indicadores
+	
+	Criação de painel de indicadores de consultas e comportamentos mais frequentes para melhoria da solução.
 
 	\end{enumerate}
+	
+\chapter[Tecnologias]{Tecnologias}
+
+\section{Modelo de trabalho}
+
+Considerando o prazo de entrega e metodologias de trabalho estudadas durante o curso, bem como de comum conhecimento profissional dos elementos do grupo, decidiu-se o emprego dos framework Kanban e Scrum para o desenvolvimento do projeto, alinhado {\`a}s práticas do DevOps.
+
+\section{Infra estrutura}
+
+A aplica{\c{c}}ão será mantida em ambiente cloud na modalidade de IAAS (Infrastructure as a Service, ou Infraestrutura como servi{\c{c}}o), utilizando os servi{\c{c}}os do provedor Microsoft Azure.
+
+\section{Back-end}
+
+Considerando a maturidade das bibliotecas da linguagem java, o amplo suporte que existe da comunidade e a experiência de desenvolvimento dos integrantes do grupo, foi escolhida a linguagem Java para sustentar a aplica{\c{c}}ão de back-end desenvolvido em Java e banco de dados MySql para persistência.
+
+\section{Front-end}
+
+O front-end será desenvolvido utilizando a biblioteca JavaScript React, empregando a linguagem typescript, HTML (hypertext markup language) e CSS (cascading style sheets).
+	
+\chapter[Análise de mercado]{Análise de mercado}
+
+    Em pesquisa de mercado e concorrência, foram identificados os seguintes competidores:
+    
+    \begin{enumerate}
+        \item \href{https://hatron.com.br/}{Hatron}
+        
+        \item \href{https://www.mundoopen.com.br/helpdesk-para-empresas-sp-suporte-tecnico-em-ti.html}{Mundo Open Tecnologia}
+        
+        \item \href{https://answers.microsoft.com/pt-br?auth=1}{Fóruns Microsoft}
+    \end{enumerate}
+    
+    \begin{table}
+        \begin{tabular}{l c c c c}
+            \hline
+            Funcionalidade          & METAVERSO & Hatron & Mundo Open & Fóruns Microsoft \\
+            \hline
+            Acesso remoto           & Sim       & Sim   & Sim & Não \\
+            Área de parceiros   & Sim   & Não   & Não & Não \\
+            Área do usuário & Sim & Sim & Sim & Sim\\
+            Atende pessoa física & Sim & Não & Não & Sim\\
+            Atende pessoa jurídica & Sim & Sim & Sim & Sim\\
+            Atendimento 24/7 & Sim & Sim & Sim & Não\\
+            Atendimento personalizado & Sim & Sim & Sim & Não\\
+            Chat Online & Sim & Não & Sim & Não\\
+            Encaminhamento para técnicos & Sim & Sim & Sim & Não\\
+            Equipe técnica própria & Não & Sim & Sim & Sim\\
+            FAQ Gratuito & Sim & Não & Não & Sim\\
+            Valor mensal fixo & Sim & Sim & Sim & Não\\
+            \hline
+
+        \end{tabular}
+    \end{table}
 
 %\section{Justificativa}
 
@@ -399,7 +441,6 @@ O cliente poderá por meio de um plano especifico contratar um técnico com um p
 
 %\lipsum[3-5]
 %Teste de citação para gerar referências no modelo.. \citeauthor{SCRUMGUIDE:2013}
-
 
 % ----------------------------------------------------------
 % Referências bibliográficas
