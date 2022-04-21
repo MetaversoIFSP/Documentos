@@ -17,17 +17,17 @@
     REFINDENT,          % não fica exatamente no formato da ABNT, mas melhora muito a formatação
                         % não utilizar REFINDENT na versão final
     MODELO,             % indica que é um documento modelo então precisa dos geradores de texto
-    TODO,               % indica que deve apresentar lista de pendencias 
+    %TODO,               % indica que deve apresentar lista de pendencias 
     % -- opções do pacote babel --
     english,            % idioma adicional para hifenização
     brazil              % o último idioma é o principal do documento
     ]{ifsp-spo-inf-cemi} % ajustar de acordo com o modelo desejado para o curso
-\AtBeginDocument{\todo[inline]{Ajustar a classe de referencia de documentclass no inicio do arquivo principal de acordo com o curso do(s) aluno(s)}}
+%\AtBeginDocument{\todo[inline]{Ajustar a classe de referencia de documentclass no inicio do arquivo principal de acordo com o curso do(s) aluno(s)}}
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{TÍTULO DO TRABALHO}
+\titulo{Metaverso - Ferramenta de Chamados de TI (ITSM) para pessoas físicas e pequenas empresas}
 
 % Trabalho individual
 %\autor{AUTOR DO TRABALHO}
@@ -35,29 +35,28 @@
 % Trabalho em Equipe
 % ver também https://github.com/abntex/abntex2/wiki/FAQ#como-adicionar-mais-de-um-autor-ao-meu-projeto
 \renewcommand{\imprimirautor}{
-\begin{tabular}{lr}
-ALUNO 1 & SPprontuario1 \\
-ALUNO 2 com sobrenome grande & SPprontuario2 \\
-ALUNO 3 & SPprontuario3 \\
-ALUNO 4 & SPprontuario4 \\
-\end{tabular}
+	\begin{tabular}{lr}
+		CEZAR GODOY NASCIMENTO	& SP3040755 \\
+		HENRIQUE HIROMI SHIMADA & SP3039421 \\
+		ISABELA SOUZA DUARTE	& SP3030083 \\
+		MATEUS SOUZA DA SILVA	& SP3022374 \\
+		VINICIUS GOMES MOREIRA	& SP3039587 \\
+		WELEN MOTA SOUSA		& SP146616X \\
+	\end{tabular}
 }
 
 
-\disciplina{A6PGP - Prática de Gerenciamento de Projetos}
+\disciplina{PI1A5 - Projeto Integrado I}
 
-\preambulo{Modelo canônico de trabalho monográfico acadêmico em conformidade com
-as normas ABNT apresentado à comunidade de usuários \LaTeX.}
-
-\data{DATA DO TRABALHO}
+\data{ABRIL DE 2022}
 
 % Definir o que for necessário e comentar o que não for necessário
 % Utilizar o Nome Completo, abntex tem orientador e coorientador
 % então vão ser utilizados na definição de professor
 \renewcommand{\orientadorname}{Professor:}
-\orientador{NOME COMPLETO DO PROFESSOR1}
+\orientador{JOSE BRAZ DE ARAUJO}
 \renewcommand{\coorientadorname}{Professor:}
-\coorientador{NOME COMPLETO DO PROFESSOR2}
+\coorientador{MARCELO TAVARES DE SANTANA}
 
 
 % ---
@@ -100,7 +99,7 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 
 %somente para o exemplo, fica primeiro
 \todo[inline]{Remover texto informativo inicial}
-\input{00-info}
+%\input{00-info}
 
 % -- lista de pendencias gerada pelo todonotes
 % -- altere opções do usepackage para remover na versão final....
