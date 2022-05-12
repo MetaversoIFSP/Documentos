@@ -1,23 +1,191 @@
 % Para facilitar a manutenção é sempre melhore criar um arquivo por capitulo, para exemplo isso não é necessário 
 
 %---------------------------------------------------------------------------------------
-\chapter{Modelo Teórico e Pressupostos (ou Hipóteses) da Pesquisa}
+\chapter{Metodologia de Gestão e Desenvolvimento do Projeto}
 \explicacao{Para trabalho da Pós Graduação}
-\preencheComTexto
+Metodologia ágil é uma forma de conduzir projetos que busca dar maior rapidez aos processos e à conclusão de tarefas. Não apenas isso, mas o agile baseia-se em um fluxo de trabalho mais ágil, flexível, sem tantos obstáculos, com total iteratividade.
 
+Tudo isso em todo ciclo de vida de um projeto: da sua concepção até a entrega/produto final.
 
+Desse modo, a metodologia ágil busca otimizar fluxos de trabalho, melhorar a produtividade de projetos e elevar as perspectivas de sucesso do seu negócio.
 
+Por tal, decidimos seguir com os métodos ágeis e após analisarmos as metodologias ágeis, adotamos a metodologia Scrum como framework a ser utilizado, baseando-nos na experiência dos membros da equipe. 
+
+\begin{itemize}
+    \item \textbf{Sprint:} A Sprint terá duração de 7 dias e antes do seu início a equipe se reúne para planejar quais elementos do Backlog serão realizados nesse período.
+    \item \textbf{Sprint Planning:} No início de cada Sprint, olha-se para o Backlog e “puxa-se” o que será feito no Sprint (tasks).
+    \item \textbf{Retrospective (retrospectiva):} Reunião após término de spint trazendo uma discussão sobre a sprint (dificuldades, sugestões, o que continuar fazendo...) 
+\end{itemize}
 
 %---------------------------------------------------------------------------------------
-\chapter{Métodos de Pesquisa}
+\section {Organização da Equipe}
+
+As atividades foram divididas para cada integrante da equipe de acordo com as suas habilidades e nível de afinidade.
+
+• \textbf{Product Owner (PO)} - Vinicius Gomes Moreira, responsável por identificar
+e definir as histórias e priorização da backlog da equipe;
+
+• \textbf{Scrum Master (SM)} - Welen Mota Sousa, responsável por ser a facilitadora das
+reuniões e líder da equipe, além de trabalhar na documentação e organização das
+Sprints, entregas e apresentações;
+
+• \textbf{Developers Team (DT)} - Todos do time trabalharão no desenvolvimento do projeto conforme o \hyperlink{atribuicoes}{Quadro 2};
+
+\begin{table}[htb]
+\hypertarget{atribuicoes}
+    \centering
+    \caption{Quadro 2 - Atribuições}
+    \begin{tabular}{|l|l|l|l|l|l|}
+        \hline
+        \textbf{Tarefa}          & \textbf{Henrique} & \textbf{Isabela} & \textbf{Mateus} & \textbf{Vinicius} & \textbf{Welen} \\ \hline
+    	Front-End                &		    &	X	&	X	    &	X	&		\\ \hline
+    	Back-End                 &	X	    &		&		    &		&		\\ \hline
+    	Banco de Dados           &	X	    &		&		    &	X	&		\\ \hline
+    	Documentação e Modelagem &	X	    &	X	&	X	    &		&		\\ \hline
+    	Vídeos                   &	X	    &	X	&	X	    &	X	&	X	\\ \hline
+    	Blog                     &	X	    &	X	&	X	    &	X	&	X	\\ \hline
+    \end{tabular}
+    \fonte{Os autores}
+\end{table}
+
+%---------------------------------------------------------------------------------------
+
+\section{Gestão do Tempo}
+Baseando-se no Scrum, a gestão do tempo será feita por sprints. Cada sprint terá a duração de uma semana para realizarmos as atividades que foram planejadas. Desse modo, todas nossas atividades está sendo acompanhada e documentada em nosso \href{https://metaversoifsp.blogspot.com/}{blog}. O \hyperlink{sprints}{Quadro 3} apresenta a lista de atividades executadas em cada Sprint.
+
+\begin{table}[htb]
+\hypertarget{sprints}
+    \centering
+    \caption{Quadro 3 - Sprints}
+     \begin{tabular}{|1|p{5cm}|p{5cm}|}
+         \hline
+        \textbf{Sprint}         			 & \textbf{Duração}  & \textbf{Atividades} \\ \hline
+    	Sprint 1 (16/03/2022)    &	7 dias	& Brainstorm de ideias e escolha da proposta \\ \hline
+    	Sprint 2 (23/03/2022)    &	7 dias	& Descrição das Funcionalidades do Projeto ITSM	\\ \hline
+    	Sprint 3 (30/03/2022)    &	7 dias	& Elaboração da arquitetura de software ITSM	\\ \hline
+    	Sprint 4 (06/04/2022)    &	7 dias	& Definição e Elaboração de artefatos de Negócios e Software \\ \hline
+    	Sprint 5 (13/04/2022)    &	7 dias	& Correção de Artefatos e Elaborado Histórias de Usuário e Casos de uso	\\ \hline
+     \end{tabular}
+     \fonte{Os autores}
+\end{table}
+
+%---------------------------------------------------------------------------------------
+\chapter{Desenvolvimento do Projeto}
 \explicacao{Para trabalho da Pós Graduação}
-\preencheComTexto
+Aqui destacaremos toda as especificações do projeto, tais como arquitetura, desenho do projeto e toda a análise de requisitos e regras de negócio. Além das tecnologias que utizamos durante o desenvolvimento desse projeto. 
 
-\section{Tipo de Pesquisa}
-\preencheComTexto
+\section{Arquitetura}
+\begin{figure}[htb]
+    \centering
+    \caption{Arquitetura}
+	\includegraphics[width=1\textwidth]{anexos/arquitetura_v1.png}
+	\fonte{Os Autores}
+    \label{fig:arquitetura}
+\end{figure}
 
-\section{Plano Amostral (se Pesquisa Quantitativa)}
-\preencheComTexto
+%---------------------------------------------------------------------------------------
+\section{Requisitos Funcionais}
+\explicacao
+Os requisitos funcionais explicitam o que a aplicação deve fazer, sem levar em consideração a maneira que será executado.
+
+\begin{table}[htb]
+    \centering
+    \caption{Quadro 4 - Requisitos Funcionais}
+    \begin{tabular}{|1|p{6cm}|p{6cm}|}
+        \hline
+        \multicolumn{1}{|c|}{Identificador} & \multicolumn{1}{c|}{Nome} & \multicolumn{1}{c|}{Descrição} \\ \hline
+        RF01 & Meios de contato multi canal para abertura de chamado & Contempla chat e formulários para detalhamento de informações de problemas não resolvidos pelo FAQ \\ \hline
+        RF02 & Interface intuitiva para identificação e resolução de problemas & Sistema deve exibir página de busca para resolução de problemas frequentes (FAQ) com interface amigável ao usuário final \\ \hline
+        RF03 & Abertura de chamado com detalhamento por extenso e ane xação de imagens & Clientes devem conseguir detalhar o problema que não conseguiram resolver pelo FAQ \\ \hline
+        RF04 & Acompanhamento do fluxo de navegação do usuário para compor análise de funil & Deve acontecer acompanhamento do fluxo de navegação do cliente para compor o histórico de navegação do chamado, para enriquecer os assuntos que podem colaborar para a auto resolução do problema \\ \hline
+        RF05 & Cadastro de técnicos e qualificações na plataforma & O sistema deve permitir que tecnicos consigam adicionar dados de identificação e qualificação na plataforma \\ \hline
+        RF06 & Registro de satisfação de atendimento & Após o atendimento do técnico, deve ser permitido que o usuário responda a uma avaliação do atendimento prestado pelo técnico \\ \hline
+        RF07 & Registro de avaliação do atendimento & Após o atendimento, o técnico deve responder a questionário de avaliação do atendimento \\ \hline
+    \end{tabular}
+    \fonte{Os autores}
+\end{table}
+
+\begin{table}[htb]
+    \centering
+    \caption{Quadro 4 - Requisitos Funcionais (Continuação)}
+    \begin{tabular}{|1|p{6cm}|p{6cm}|}
+        \hline
+        \multicolumn{1}{|c|}{Identificador} & \multicolumn{1}{c|}{Nome} & \multicolumn{1}{c|}{Descrição} \\ \hline
+        RF08 & Cadastro orientado a incrementação e atualização de dados & Clientes devem conseguir cadastrar-se apenas com integração de dados de serviços de autorização e adição opcional de mais detalhes sobre equipamentos e fluência em dispositivos computacionais. \\ \hline
+        RF09 & Disponibilizar histórico de incidentes relacionados ao problema reclamado do cliente para o técnico & Técnico deve ter disponível o histórico de problemas e tratativas que foram aplicadas para um cliente, ao realizar atendimento. \\ \hline
+        RF10 & Enriquecimento de base de respostas & Usuários da plataforma podem elaborar perguntas e respostas e contribuir para o crescimento da base de respostoas. \\ \hline
+        RF11 & Interface de administração com relatórios e indicadores para monitoração de incidentes e resoluções & Tem o objetivo de centralizar e indicar os incidentes que vêm crescendo para orientar o crescimento de base de respostas. \\ \hline
+        RF12 & Interface de cadastro de instruções para o FAQ & Sistema deve permitir que novas soluções sejam criadas, editadas, suprimidas ou deletadas \\ \hline
+        RF13 & Interface de relatórios de atendimentos e buscas passadas & O cliente deve ser capaz de verificar as soluções que mais acessa, histórico de pagamentos e histórico de atendimentos) \\ \hline
+        RF14 & Chamados podem gerar atendimentos presenciais & Sistema deve apresentar interface de disponibilidade de horários para agendamento a partir da agenda de disponibilidade de técnicos \\ \hline
+    \end{tabular}
+    \fonte{Os autores}
+\end{table}
+%---------------------------------------------------------------------------------------
+\section{Requisitos Não Funcionais}
+\explicacao{Os requisitos funcionais explicitam o que a aplicação deve fazer, sem levar em consideração a maneira que será executado.}
+
+\begin{table}[htb]
+    \centering
+    \caption{Quadro 5 - Requisitos Não Funcionais}
+    \begin{tabular}{|c|p{4cm}|p{10cm}|}
+
+        Identificador & Subtipo & Consideração \\ \hline
+        RNF01 & Desempenho & \begin{tabular}[c]{@{}l@{}}ideal: "0.1 s" \\ aceitavel: "1 s" \\ referencia: \\ "https://www.nngroup.com/articles/website-response-\\times/"\end{tabular} \\ \hline
+        RNF02 & Usabilidade & Usuário não deve demorar mais que 10 segundos para identificar a seção relevante para sua busca \\ \hline
+        RNF03 & Portabilidade & Java 11 e React \\ \hline
+        RNF04 & Consistência & Serviço gerenciado Azure App Service \\ \hline
+        RNF05 & Confiabilidade & Suporte do serviço cloud Azure App Service (99,95\% uptime) \\ \hline
+        RNF06 & Segurança & Integração de serviços de autorização de acesso \\ \hline
+        RNF07 & Infraestrutura & Cloud \\ \hline
+        RNF08 & Sistema operacional compatível & Serviço gerenciado \\ \hline
+        RNF09 & Conexão & Suporte do serviço cloud Azure App Service (99,95\% uptime) \\ \hline
+        RNF10 & Criptografia usada pela empresa & \\ \hline
+        RNF11 & Linguagem de progração requisitada & Java e React \\ \hline
+        RNF12 & Localização geográfica em que será usado & Brasil \\ \hline
+        RNF13 & Legislação & Brasil, em especial LGPD \\ \hline
+        RNF14 & Sistemas & Linux container \\ \hline
+        RNF15 & Política de proteção de dados & LGPD \\ \hline
+    \end{tabular}
+\end{table}
+\fonte{Os autores}
+
+\section{Regras de Negócio}
+\explicacao{As Regras de Negócio são o primeiro e mais fundamental insumo da modelagem
+do projeto porque é através delas que são definidas as regras básicas que o sistema deve
+respeitar.}
+
+\begin{table}[htb]
+    \centering
+    \caption{Quadro 6 - Regras de Negócio}
+    \begin{tabular}{|c|p{14cm}|}
+        \hline
+        Código & \multicolumn{1}{c|}{Descrição} \\ \hline
+        RN001 & Um usuário pode se cadastrar/autenticar utilizando sua conta Google ou email e senha \\ \hline
+        RN002 & Não deve ser possível existir mais de um usuário com o mesmo e-mail e perfil(técnico/usuário) \\ \hline
+        RN003 & O usuário pode acessar o FAQ sem necessidade de um cadastro. \\ \hline
+        RN004 & Os problemas relatados no FAQ devem estar associados a uma determinada categoria de problemas, consequentemente a uma subcategoria. \\ \hline
+        RN005 & Os administradores da aplicação e usuários de perfil técnico devem poder cadastrar novas soluções \\ \hline
+        RN006 & Os administradores da aplicação devem poder remover soluções inválidas \\ \hline
+        RN007 & Usuários clientes devem ter um mínimo de dados cadastrados para serem devidamente atendidos (País, Estado, Município, Logradouro, CEP, Número, Complemento), e-mail, telefone. \\ \hline
+        RN008 & O usuário pode alterar seus dados a qualquer momento na área de usuário. \\ \hline
+        RN009 & O usuário cliente poderá extrair relatórios referentes aos seus atendimentos remotos, presenciais e histórico de pagamento. \\ \hline
+        RN010 & O usuário Free não deve ter acesso ao Chat Online (Recurso Premium) \\ \hline
+        RN011 & O usuário assinante deverá ter acesso ao Chat Online e atendimento técnico remoto \\ \hline
+        RN012 & O usuário assinante comercial poderá incluir outros usuários em sua subscrição \\ \hline
+        RN013 & Todos os usuários cadastrados devem poder abrir chamado técnico externo \\ \hline
+        RN014 & O usuário cliente poderá escolher a forma de atendimento desejado para o chamado remoto (e-mail, chat online, whats app, telefone). \\ \hline
+        RN015 & O usuário técnico da equipe, durante o chat, deverá ter acesso aos dados do usuário cliente para melhor atendimento. \\ \hline
+        RN016 & O usuário cliente, ao optar por abrir um chamado técnico presencial, poderá escolher o técnico que o atenderá, onde exibiremos os técnicos mais próximos geograficamente e destacaremos os melhores avaliados. \\ \hline
+        RN017 & O usuário cliente deve saber o custo aproximado do reparo para o chamado em questão, antes de avançar com o mesmo. \\ \hline
+        RN018 & O usuário cliente poderá escolher entre ir até o técnico ou solicitar a visita do mesmo in loco (com os devidos acréscimos de custo) \\ \hline
+        RN019 & O usuário cliente poderá escolher a visita de um técnico específico, ou deixar para que a ferramenta indique. Nesse caso, a ferramenta deve abrir o chamado de forma geral e os técnicos poderão pegar o chamado para eles. \\ \hline
+        RN020 & O usuário técnico deve conter o mínimo de dados para efetuar o cadastro que são: endereço: (País, Estado, Município, Logradouro, CEP, Número, Complemento), e-mail, telefone, Nome/Razão social, CPF/CNPJ, Inscrição Estadual ou Isento, Dados Bancários(Tipo de conta C/C ou C/P, número do Banco, número da Agência, número da Conta, nome do titular da conta). \\ \hline
+        RN021 & Em caso de dados faltantes, o usuário técnico fica inapto a atender chamados \\ \hline
+        RN022 & O usuário técnico deve ter acesso a um portal específico para visualização de chamados em aberto, histórico de atendimento, pagamentos, avaliações. \\ \hline
+    \end{tabular}
+\end{table}
+\fonte{Os autores}
 
 \section{Instrumento de Pesquisa e Escalas Utilizadas (Escalas se Pesquisa Quantitativa)}
 \preencheComTexto
