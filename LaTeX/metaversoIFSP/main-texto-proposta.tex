@@ -16,7 +16,7 @@
     %subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
     % Opções que não devem ser utilizadas na versão final do documento
     %draft,              % para compilar mais rápido, remover na versão final
-    MODELO,             % indica que é um documento modelo então precisa dos geradores de texto
+    %MODELO,             % indica que é um documento modelo então precisa dos geradores de texto
     %TODO,               % indica que deve apresentar lista de pendencias 
     % -- opções do pacote babel --
     english,            % idioma adicional para hifenização
@@ -42,15 +42,15 @@
 
 % Trabalho em Equipe
 % ver também https://github.com/abntex/abntex2/wiki/FAQ#como-adicionar-mais-de-um-autor-ao-meu-projeto
-\renewcommand{\imprimirautor}{
-\begin{tabular}{lr}
-%CEZAR GODOY NASCIMENTO	& SP3040755 \\
-HENRIQUE HIROMI SHIMADA & SP3039421 \\
-ISABELA SOUZA DUARTE	& SP3030083 \\
-MATEUS SOUZA DA SILVA	& SP3022374 \\
-VINICIUS GOMES MOREIRA	& SP3039587 \\
-WELEN MOTA SOUSA	& SP146616X \\
-\end{tabular}
+    \renewcommand{\imprimirautor}{
+        \begin{tabular}{lr}
+        %CEZAR GODOY NASCIMENTO	& SP3040755 \\
+        HENRIQUE HIROMI SHIMADA & SP3039421 \\
+        ISABELA SOUZA DUARTE	& SP3030083 \\
+        MATEUS SOUZA DA SILVA	& SP3022374 \\
+        VINICIUS GOMES MOREIRA	& SP3039587 \\
+        WELEN MOTA SOUSA	& SP146616X \\
+        \end{tabular}
 }
 
 
@@ -501,32 +501,44 @@ Nesse momento, o desenvolvimento de uma solução que popule e atualize a seçã
     \section{Comparativo de concorrência}
     É sabida a existência de outros concorrentes, sendo que reconhecemos estes como os que oferecem maior gama de serviços atendidos, servindo-nos para comparativo e entendimento de mercado.
     
-    \begin{table}
-        \begin{tabular}{l c c c c}
-            \hline
-            Funcionalidade          & METAVERSO & Hatron & Mundo Open & Fóruns Microsoft \\
-            \hline
-            Acesso remoto           & Sim       & Sim   & Sim & Não \\
-            Área de parceiros   & Sim   & Não   & Não & Não \\
-            Área do usuário & Sim & Sim & Sim & Sim\\
-            Atende pessoa física & Sim & Não & Não & Sim\\
-            Atende pessoa jurídica & Sim & Sim & Sim & Sim\\
-            Atendimento 24/7 & Sim & Sim & Sim & Não\\
-            Atendimento personalizado & Sim & Sim & Sim & Não\\
-            Chat Online & Sim & Não & Sim & Não\\
-            Encaminhamento para técnicos & Sim & Sim & Sim & Não\\
-            Equipe técnica própria & Não & Sim & Sim & Sim\\
-            FAQ Gratuito & Sim & Não & Não & Sim\\
-            Valor mensal fixo & Sim & Sim & Sim & Não\\
-            \hline
-
-        \end{tabular}
+    \begin{table}[h] % manter com o h para que a tabela não seja ancorado no topo
+		\centering\footnotesize
+		\caption{\label{analise} Análise da concorrência}
+		%\resize
+		\resizebox {.75 \textwidth }{!}{
+            \begin{tabular}{l c c c c}
+                \hline
+                Funcionalidade          & METAVERSO & Hatron & Mundo Open & Fóruns Microsoft \\
+                \hline
+                Acesso remoto           & Sim       & Sim   & Sim & Não \\
+                Área de parceiros   & Sim   & Não   & Não & Não \\
+                Área do usuário & Sim & Sim & Sim & Sim\\
+                Atende pessoa física & Sim & Não & Não & Sim\\
+                Atende pessoa jurídica & Sim & Sim & Sim & Sim\\
+                Atendimento 24/7 & Sim & Sim & Sim & Não\\
+                Atendimento personalizado & Sim & Sim & Sim & Não\\
+                Chat Online & Sim & Não & Sim & Não\\
+                Encaminhamento para técnicos & Sim & Sim & Sim & Não\\
+                Equipe técnica própria & Não & Sim & Sim & Sim\\
+                FAQ Gratuito & Sim & Não & Não & Sim\\
+                Valor mensal fixo & Sim & Sim & Sim & Não\\
+                \hline
+    
+            \end{tabular}
+        }
     \end{table}
 
 \chapter[Arquitetura da solução]{Arquitetura da solução}
-
-
-\includegraphics{arquitetura_v1.drawio.png}
+    
+    \begin{figure}[htbp]
+        \hypertarget{arquitetura}{%
+            \caption{Arquitetura da solução}\label{arquitetura}
+            \begin{center}
+                \includegraphics{arquitetura_v1.drawio.png}
+            \end{center}
+        }
+        \legend{Fonte: Autores}
+    \end{figure}
 
 %\section{Justificativa}
 
