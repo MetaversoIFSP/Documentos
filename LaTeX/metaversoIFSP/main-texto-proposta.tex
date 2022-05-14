@@ -506,18 +506,18 @@ Nesse momento, o desenvolvimento de uma solução que popule e atualize a seçã
             \hline
             Funcionalidade          & METAVERSO & Hatron & Mundo Open & Fóruns Microsoft \\
             \hline
-            Acesso remoto           & Sim       & Sim   & Sim & Não \\
-            Área de parceiros   & Sim   & Não   & Não & Não \\
-            Área do usuário & Sim & Sim & Sim & Sim\\
-            Atende pessoa física & Sim & Não & Não & Sim\\
-            Atende pessoa jurídica & Sim & Sim & Sim & Sim\\
-            Atendimento 24/7 & Sim & Sim & Sim & Não\\
-            Atendimento personalizado & Sim & Sim & Sim & Não\\
-            Chat Online & Sim & Não & Sim & Não\\
-            Encaminhamento para técnicos & Sim & Sim & Sim & Não\\
-            Equipe técnica própria & Não & Sim & Sim & Sim\\
-            FAQ Gratuito & Sim & Não & Não & Sim\\
-            Valor mensal fixo & Sim & Sim & Sim & Não\\
+            Acesso remoto           & X       & X   & X &   \\
+            Área de parceiros   & X   &     &   &   \\
+            Área do usuário & X & X & X & X\\
+            Atende pessoa física & X &   &   & X\\
+            Atende pessoa jurídica & X & X & X & X\\
+            Atendimento 24/7 & X & X & X &  \\
+            Atendimento personalizado & X & X & X &  \\
+            Chat Online & X &   & X &  \\
+            Encaminhamento para técnicos & X & X & X &  \\
+            Equipe técnica própria &   & X & X & X\\
+            FAQ Gratuito & X &   &   & X\\
+            Valor mensal fixo & X & X & X &  \\
             \hline
 
         \end{tabular}
@@ -525,8 +525,31 @@ Nesse momento, o desenvolvimento de uma solução que popule e atualize a seçã
 
 \chapter[Arquitetura da solução]{Arquitetura da solução}
 
+\begin{figure}[h]
+\caption{Arquitetura de Solução}
 
-\includegraphics{arquitetura_v1.drawio.png}
+\centering % para centralizarmos a figura
+\includegraphics[width=15cm]{anexos/arquitetura_v1.png} % leia abaixo
+\label{figura:desenhodearquitetura}
+\fonte{Os Autores}
+\end{figure}
+
+Em nossa proposta para arquitetura, podemos observar o uso de 2 (\textit{App Services}), onde o primeiro fará a hospedagem do (\textit{front-end}) da aplicação, que será desenvolvida com o (\textit{framework}) (\textit{REACT}). A segunda camada fará a hospedagem de nosso (\textit{Back-end}) que será desenvolvida utilizando a linguagem Java, com o (\textit{framework}) (\textit{Springboot}).
+Por fim, teremos um serviço de SQL Server, que manterá nossas bases de dados hospedadas.
+
+\section{Custos de mantenimento da arquitetura}
+\begin{table}[]
+\vspace{-50mm}
+\begin{tabular}{|c|c|c|c|c|c|}
+
+\hline
+\textbf{Serviço} & \textbf{Quantidade} & \textbf{Plano} & \textbf{Zona do serviço} & \textbf{Valor unitário} & \textbf{Total} \\ \hline
+AppService & 1 & F1 - Gratuito & East US & R\$ 0,00 & R\$ 0,00 \\ \hline
+AppService & 1 & F1 - Gratuito & East US & R\$ 0,00 & R\$ 0,00 \\ \hline
+SQL Server & 1 & Standard S0 & East US & R\$ 0,00 & R\$ 0,00 \\ \hline
+SQL Server & 1 & Standard S0 & East US & R\$ 74,48 & R\$ 74,48 \\ \hline
+\end{tabular}
+\end{table}
 
 %\section{Justificativa}
 
