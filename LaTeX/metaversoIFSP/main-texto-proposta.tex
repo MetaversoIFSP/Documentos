@@ -523,8 +523,9 @@ Nesse momento, o desenvolvimento de uma solução que popule e atualize a seçã
         \end{tabular}
     \end{table}
 
-\chapter[Arquitetura da solução]{Arquitetura da solução}
+\chapter[Desenho da Aplicação]{Desenho da Aplicação}
 
+\section{Arquitetura da Solução}
 \begin{figure}[h]
 \caption{Arquitetura de Solução}
 
@@ -537,19 +538,58 @@ Nesse momento, o desenvolvimento de uma solução que popule e atualize a seçã
 Em nossa proposta para arquitetura, podemos observar o uso de 2 (\textit{App Services}), onde o primeiro fará a hospedagem do (\textit{front-end}) da aplicação, que será desenvolvida com o (\textit{framework}) (\textit{REACT}). A segunda camada fará a hospedagem de nosso (\textit{Back-end}) que será desenvolvida utilizando a linguagem Java, com o (\textit{framework}) (\textit{Springboot}).
 Por fim, teremos um serviço de SQL Server, que manterá nossas bases de dados hospedadas.
 
-\section{Custos de mantenimento da arquitetura}
-\begin{table}[]
-\vspace{-50mm}
+\subsection{Custos de mantenimento da arquitetura}
+Os planos F1 dos (\textit{App Services}) tem gratuidade vitalícia conforme site oficial.
+O plano Standard S0 para SQL Server tem gratuidade pelos primeiros 12 meses de uso, após isso, o valor será de US\$ 14,72 por mês
+\begin{table}[h]
 \begin{tabular}{|c|c|c|c|c|c|}
-
 \hline
 \textbf{Serviço} & \textbf{Quantidade} & \textbf{Plano} & \textbf{Zona do serviço} & \textbf{Valor unitário} & \textbf{Total} \\ \hline
 AppService & 1 & F1 - Gratuito & East US & R\$ 0,00 & R\$ 0,00 \\ \hline
 AppService & 1 & F1 - Gratuito & East US & R\$ 0,00 & R\$ 0,00 \\ \hline
 SQL Server & 1 & Standard S0 & East US & R\$ 0,00 & R\$ 0,00 \\ \hline
-SQL Server & 1 & Standard S0 & East US & R\$ 74,48 & R\$ 74,48 \\ \hline
+*SQL Server & 1 & Standard S0 & East US & R\$ 74,48 & R\$ 74,48 \\ \hline
 \end{tabular}
 \end{table}
+
+
+\section{Casos de Uso}
+\begin{figure}[h]
+\caption{Casos de Uso}
+
+\centering % para centralizarmos a figura
+\includegraphics[width=15cm]{anexos/Casos de Uso.jpeg} % leia abaixo
+\label{figura:casosdeuso}
+\fonte{Os Autores}
+\end{figure}
+
+Os casos de uso orientam a equipe de desenvolvimento sobre o que a aplicação deverá atender. Conforme diagrama acima, vemos 3 atores principais e suas generalizações, além de suas atividades dentro da aplicação. Assim, podemos dividi-lo nos seguintes casos de uso:
+
+\subsection{Caso de Uso: Contratar Assinatura Premium}
+O cliente, que pode ser pessoa física ou jurídica, se torna um assinante Premium da aplicação, mediante pagamento mensal de um valor pré-determinado, de acordo com o plano contratado. Alguns dos próximos casos de uso estão vinculados ao usuário ter a assinatura ativa para conseguir utilizar.
+
+\subsection{Caso de Uso: Pesquisar no FAQ}
+O cliente navega dentro do FAQ, visualizando categorias que levem-o até o problema que o mesmo tenha e disponibilize uma solução.
+
+\subsection{Caso de Uso: Realizar busca por termos}
+O cliente poderá, após a pesquisa no FAQ sem sucesso, realizar uma busca dentro da própria aplicação através de poucas palavras que poderá indicar links de outros sites e fóruns potencialmente úteis para solucionar seu problema.
+
+\subsection{Caso de Uso: Iniciar atendimento no Chat}
+O cliente poderá a qualquer momento, desde que seja um assinante Premium ativo, iniciar um atendimento técnico via chat, onde terá auxílio para resolver os problemas técnicos de seu dispositivo.
+
+\subsection{Caso de Uso: Avaliar atendimento Chat}
+O cliente que tiver passado por um Atendimento via chat, conforme mencionado no caso anterior, poderá avaliar o atendimento, contribuindo para a melhoria da aplicação e parceiros.
+
+\subsection{Caso de Uso: Solicitar atendimento técnico}
+O cliente pode solicitar um atendimento técnico, que poderá ser multicanal(telefone, mensagens, remota ou presencial) de um técnico parceiro. A ferramenta listará os técnicos da região disponíveis para atender o chamado de acordo com sua especialidade, onde o cliente pode escolher o técnico ou deixar em aberto para que os técnicos possam aplicar para atender o atendimento.
+
+\subsection{Caso de Uso: Avaliar o atendimento técnico}
+O cliente que tiver solicitado atendimento técnico avalia o mesmo, contribuindo para a relevância do Técnico parceiro dentro da ferramenta e para possíveis melhorias dentro da plataforma.
+
+\section{Regras de negócio}
+\section{Requisitos Funcionais}
+\section{Requisitos Não Funcionais}
+\section{MER e DER}
 
 %\section{Justificativa}
 
