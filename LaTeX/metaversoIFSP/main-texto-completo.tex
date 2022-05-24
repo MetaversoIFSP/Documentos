@@ -1,4 +1,4 @@
-%% Adaptado a partir de :
+    %% Adaptado a partir de :
 %%    abtex2-modelo-trabalho-academico.tex, v-1.9.2 laurocesar
 %% para ser um modelo para os trabalhos no IFSP-SPO
 
@@ -11,12 +11,12 @@
     a4paper,            % tamanho do papel. 
     % -- opções da classe abntex2 --schwinn
     % Opções que não devem ser utilizadas na versão final do documento
-    %draft,              % para compilar mais rápido, remover na versão final
-    paginasA3,  % indica que vai utilizar paginas em A3 
-    BIBLATEX,           % indica para utilizar BIBLATEX em vez do abntex2cite
-    REFINDENT,          % não fica exatamente no formato da ABNT, mas melhora muito a formatação
+    % draft,              % para compilar mais rápido, remover na versão final
+    % paginasA3,  % indica que vai utilizar paginas em A3 
+    % BIBLATEX,           % indica para utilizar BIBLATEX em vez do abntex2cite
+    % REFINDENT,          % não fica exatamente no formato da ABNT, mas melhora muito a formatação
                         % não utilizar REFINDENT na versão final
-    MODELO,             % indica que é um documento modelo então precisa dos geradores de texto
+    % MODELO,             % indica que é um documento modelo então precisa dos geradores de texto
     %TODO,               % indica que deve apresentar lista de pendencias 
     % -- opções do pacote babel --
     english,            % idioma adicional para hifenização
@@ -27,6 +27,11 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
+\usepackage{qrcode}
+\usepackage{pdflscape}
+\usepackage{caption}
+
+
 \titulo{Metaverso - Ferramenta de Chamados de TI (ITSM) para pessoas físicas e pequenas empresas}
 
 % Trabalho individual
@@ -36,7 +41,7 @@
 % ver também https://github.com/abntex/abntex2/wiki/FAQ#como-adicionar-mais-de-um-autor-ao-meu-projeto
 \renewcommand{\imprimirautor}{
 	\begin{tabular}{lr}
-		CEZAR GODOY NASCIMENTO	& SP3040755 \\
+		%CEZAR GODOY NASCIMENTO	& SP3040755 \\
 		HENRIQUE HIROMI SHIMADA & SP3039421 \\
 		ISABELA SOUZA DUARTE	& SP3030083 \\
 		MATEUS SOUZA DA SILVA	& SP3022374 \\
@@ -151,8 +156,8 @@
 
 % ---- opcionais 
 \input{pre-dedicatoria}
-\input{pre-agradecimentos}
-\input{pre-epigrafe}
+\input{pre-agradecimentos}  
+%\input{pre-epigrafe}
 
 % -- resumo obrigatório
 \input{pre-resumos}
@@ -178,14 +183,14 @@
 % inserir lista de quadros
 % ---
 \pdfbookmark[0]{\listofquadrosname}{loq}
-\listofquadros*
+%\listofquadros*
 \cleardoublepage
 % ---
 
-\input{pre-siglas}
+\input{pre-siglas} 
 
-\todo[inline]{Remover lista de símbolos se não for necessária}
-\input{pre-simbolos}
+%\todo[inline]{Remover lista de símbolos se não for necessária}
+%\input{pre-simbolos}
 
 
 % ---
@@ -203,17 +208,24 @@
 \textual
 
 \input{textos-introducao}
-\input{textos-revisao-literatura}
+%\input{textos-revisao-literatura}
 
-% Para facilitar a manutenção é sempre melhore criar um arquivo por capitulo, para exemplo isso não é necessário 
-\input{textos-desenvolvimento}
+% Para facilitar a manutenção é shttps://www.overleaf.com/project/627086c1f6b8480b7ae2a874#empre melhore criar um arquivo por capitulo, para exemplo isso não é necessário 
+%\input{textos-desenvolvimento}
+\input{textos-gerenciamento-projeto}
+\input{LaTeX/metaversoIFSP/texto-desenho-aplicacao}
+\input{textos-desenvolvimento-metaverso}
+\input{LaTeX/metaversoIFSP/texto-tecnologias}
+\input{LaTeX/metaversoIFSP/texto-ferramentas}
+\input{LaTeX/metaversoIFSP/texto-analise-mercado}
+\input{LaTeX/metaversoIFSP/texto-modelo-negocio}
 
 
 % exemplos de escrita LaTeX e erros comuns
-\input{exemplos/exemplos}
-\input{erros/erros-comuns-documentos}
-\input{erros/erros-comuns-projetos}
-\input{erros/revisao}
+% \input{exemplos/exemplos}
+% \input{erros/erros-comuns-documentos}
+% \input{erros/erros-comuns-projetos}
+% \input{erros/revisao}
 
 
 
@@ -246,17 +258,17 @@
 \explicacao{Existe um bug no biblatex que o backref não conta corretamente o número de citações em fontes de ilustrações. Em um trabalho normal as citações devem aparecer no texto e dessa forma o bug não vai acontecer. Nesse documento existem citações diretamente na fonte de ilustrações gerando o problema da indicação \enquote{Citado 0 vez na página ...}}
 
 }{%
-\bibliography{referencias,exemplos/abntex2-doc-abnt-6023}
+%\bibliography{referencias, exemplos/abntex2-doc-abnt-6023}
 }
 
-\input{pos-glossario.tex}
+%\input{pos-glossario.tex}
 
-\input{pos-apendices}
-
-
+%\input{pos-apendices}
 
 
-\input{pos-anexos}
+
+
+%\input{pos-anexos}
 
 
 %---------------------------------------------------------------------

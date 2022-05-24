@@ -1,7 +1,6 @@
 %% Adaptado a partir de :
 %%    abtex2-modelo-trabalho-academico.tex, v-1.9.2 laurocesar
 %% para ser um modelo para os trabalhos no IFSP-SPO
-\usepackage{longtable}
 
 \documentclass[
     % -- opções da classe memoir --
@@ -17,7 +16,7 @@
     %subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
     % Opções que não devem ser utilizadas na versão final do documento
     %draft,              % para compilar mais rápido, remover na versão final
-    MODELO,             % indica que é um documento modelo então precisa dos geradores de texto
+    %MODELO,             % indica que é um documento modelo então precisa dos geradores de texto
     %TODO,               % indica que deve apresentar lista de pendencias 
     % -- opções do pacote babel --
     english,            % idioma adicional para hifenização
@@ -43,15 +42,15 @@
 
 % Trabalho em Equipe
 % ver também https://github.com/abntex/abntex2/wiki/FAQ#como-adicionar-mais-de-um-autor-ao-meu-projeto
-\renewcommand{\imprimirautor}{
-\begin{tabular}{lr}
-CEZAR GODOY NASCIMENTO	& SP3040755 \\
-HENRIQUE HIROMI SHIMADA & SP3039421 \\
-ISABELA SOUZA DUARTE	& SP3030083 \\
-MATEUS SOUZA DA SILVA	& SP3022374 \\
-VINICIUS GOMES MOREIRA	& SP3039587 \\
-WELEN MOTA SOUSA	& SP146616X \\
-\end{tabular}
+    \renewcommand{\imprimirautor}{
+        \begin{tabular}{lr}
+        %CEZAR GODOY NASCIMENTO	& SP3040755 \\
+        HENRIQUE HIROMI SHIMADA & SP3039421 \\
+        ISABELA SOUZA DUARTE	& SP3030083 \\
+        MATEUS SOUZA DA SILVA	& SP3022374 \\
+        VINICIUS GOMES MOREIRA	& SP3039587 \\
+        WELEN MOTA SOUSA	& SP146616X \\
+        \end{tabular}
 }
 
 
@@ -63,7 +62,7 @@ WELEN MOTA SOUSA	& SP146616X \\
 
 \data{MARÇO DE 2022}
 
-% Definir o que for necessário e comentar o que não for necessário
+% Definir o que for necessários e comentar o que não for necessário
 % Utilizar o Nome Completo, abntex tem orientador e coorientador
 % então vão ser utilizados na definição de professor
 \renewcommand{\orientadorname}{Professor:}
@@ -124,551 +123,42 @@ WELEN MOTA SOUSA	& SP146616X \\
 
 \chapter[Introdução]{Introdução}
 
-De acordo com a PNAD de 2019 (\citeauthor{PNAD:2019}), 82,7\% dos domicílios brasileiros contam com acesso à internet. Mesmo tendo acesso de banda larga em 80,2\% dos dispositivos móveis do país, apenas 45,1\% os domicílios da amostra têm acesso via computador. Assim, entendemos que embora muitos dos usuários têm alguma fluência em aplicativos móveis, as diferenças de interfaces pode ser um desafio para o usuário que têm tarefas diferentes das desempenhadas em aplicativos móveis.
+	De acordo com a PNAD de 2019 (\citeauthor{PNAD:2019}), 82,7\% dos domicílios brasileiros contam com acesso à internet. Mesmo tendo acesso de banda larga em 80,2\% dos dispositivos móveis do país, apenas 45,1\% os domicílios da amostra têm acesso via computador. Assim, entendemos que embora muitos dos usuários têm alguma fluência em aplicativos móveis, as diferenças de interfaces pode ser um desafio para o usuário que têm tarefas diferentes das desempenhadas em aplicativos móveis.
 
-Ainda, considerando que existem diversas soluções corporativas de suporte, em contraste, para esses usuários, as soluções que mais se apresentam são fóruns, que ainda que sejam gratuitas, ainda demandam algum trabalho e interação que os usuários alvo são pouco familiarizados ou têm compreensão limitados em relação à dinâmica de tais ferramentas.
+	Ainda, considerando que existem diversas soluções corporativas de suporte, em contraste, para esses usuários, as soluções que mais se apresentam são fóruns, que ainda que sejam gratuitas, ainda demandam algum trabalho e interação que os usuários alvo são pouco familiarizados ou têm compreensão limitados em relação à dinâmica de tais ferramentas.
 
-Assim, propomos uma ferramenta com capacidade de suportar os usuários que sentem necessidade de suporte personalizado.
-
-\chapter[Problema]{Problema}
-
-% Dificuldade em resolver problemas corriqueiros incomodam ou impedem o uso esperado do dispositivo, como um mal funcionamento de impressora e lentidão na execução de softwares, tornando sua utilização menos produtiva.
-
-Existência de potencial relevante de usuários de pouca fluência com soluções de tecnologia que têm dificuldades em resolver problemas frustantes e corriqueiros com computadores pessoais que  incomodam ou impedem o uso esperado do dispositivo por não conseguirem desfrutar do dispositivo ou, mesmo, trabalhar.
-
-\begin{comment}
-\subsection{Personas}
-Usuários finaliza com nível muito elementar de conhecimento e interação com dispositivos desktop.
-
-\subsubsubsection{Persona 1}
-José é um senhor de 65 anos que sempre trabalhou em escritórios, mas sempre contou com o suporte da empresa em que trabalhava para conseguir resolver problemas cotidianos. Entretanto, desde que se aposentou, não conta mais com esse suporte. Não é um problema muito grande, mas nem sempre existe alguém disponível para ajuda-lo e o problema acaba esquecido. Seu computador novo só é usado, quando está no cabo.
-
-\subsubsubsection{Persona 2}
-Eleonora é uma enfermeira que usa apenas os sistemas do hospital em que trabalha. Em casa, preciso instalar o sistema java no seu computador para fazer a declaração do imposto de renda do ano em seu computador novo, mas morre de fazer algo e ter dados vazados. Não sabe pra quem pedir, por que está sempre muito ocupada.
-
-\subsubsubsection{Persona 3}
-Rafael é pai de duas crianças pequenas e trabalha o dia inteiro na rua, mas precisa emitir nota fiscal e fazer algumas coisas no computador de tempos em tempos. Entretanto vira e mexe, tem que resolver problemas com o computador ou com a impressora e isso sempre toma tempo demais, tomando do tempo que gostaria de brincar com os filhos.
-
-\subsubsubsection{Persona 4}
-Claudenice faz a melhor coxinha da região e é muito organizada. Os negócios estão indo muito bem e até já contratou uma contabilidade e duas pessoas para ajudar a organizar nas atividades do dia a dia. Mas, nenhuma das pessoas que contratou pode fazer algo que ela não abre mão: tomar conta das próprias finanças. Mesmo assim, vão ajuda-la a organizar as entregas e coletar os pedidos no computador. Ninguém sabe mexer muito bem no computador e isso preocupa a Claudenice, pois já ficou na mão uma vez e demorou bastante para conseguir achar alguém que ajudasse.
-
-
-
-\chapter{Modelo de negócio}
-
-O modelo de negócio contará com planos free e escalonado em dois diferentes níveis de serviço para permitir que os clientes possam escolher o nível de suporte que deseja ser atendido.
-
-Em ambos os modos, existe a possibilidade do usuário, após passar pelos filtros da plataforma para sua solução de problema, acionar um prestador de serviços terceiro, que poderá atender o usuário presencialmente em seu estabelecimento. Nesses casos, a plataforma poderá receber o pagamento do serviço (tabelado) e reter o mesmo até confirmação da solução por ambas as partes, funcionando como uma intermediadora.
-
-
-Futuramente, poderão ser estudados planos de assinaturas premium em níveis diferenciados.
-
-\section{Planos}
-
-\subsection{Free}
-
-Usuário acessa a plataforma, navega pelos FAQs, podendo sanar suas dúvidas e resolver seus problemas por conta própria através da plataforma – Contém ADS.
-
-\subsection{Premium}
-
-Modelo de assinatura mensal onde o usuário paga um valor e terá 1 dispositivo vinculado à assinatura. Ao assinar, a equipe instalará os softwares para acesso remoto e, quando o usuário não conseguir resolver por conta própria o problema, será atendido via chat ou WhatsApp para resolução.
-
-
-\section{MVP}
-
-A proposta inicial é a criação de uma ferramenta que favoreça a identificação da solução pelo usuário por conta própria, utilizando orientação de uma solução automatizada.
-
-Nesse momento, o desenvolvimento de uma solução que popule e atualize a seção de perguntas frequentes e o chat automatizado é prioridade de desenvolvimento e será o principal indicador de viabilidade.
-
-\end{comment}
-
+	Assim, propomos uma ferramenta com capacidade de suportar os usuários que sentem necessidade de suporte personalizado.
 
 \chapter[Objetivos]{Objetivos}
 
-O projeto elaborado propõe uma solução que atenda pessoas com baixa fluência em sistemas de computação em situações cotidianas em que seus dispositivos não funcionem de acordo com o esperado pelo usuário.
-
-Entende-se que a solução tem como alvo pessoas físicas e pequenas empresas, que normalmente têm acesso limitado ou nenhum a ferramentas tradicionais de suporte de tecnologia da informação (\textit{ITSM - Information Technology Service Management}).
-
-Para tanto, foram definidos os seguintes objetivos para criação do serviço: elaboração do mínimo produto viável e suas ferramentas essenciais, com pontos de checagem (\textit{check point}) para verificação do avanço da solução.
+	O projeto elaborado propõe uma solução que atenda pessoas com baixa fluência em sistemas de computação em situações cotidianas em que seus dispositivos não funcionem de acordo com o esperado pelo usuário.
+	
+	Entende-se que a solução tem como alvo pessoas físicas e pequenas empresas, que normalmente têm acesso limitado ou nenhum a ferramentas tradicionais de suporte de tecnologia da informação (\textit{ITSM - Information Technology Service Management}).
+	
+	Para tanto, foram definidos os seguintes objetivos para criação do serviço: elaboração do mínimo produto viável e suas ferramentas essenciais, com pontos de checagem (\textit{check point}) para verificação do avanço da solução.
 
 \section{Objetivo Principal}
 
-Prover assistência de problemas em sistemas computacionais domésticos ou de pequenas empresas para usuários finais com pouca ou nenhuma familiaridade a problemas cotidianos.
+	Prover assistência a problemas em sistemas computacionais domésticos ou de pequenas empresas para usuários finais com pouca ou nenhuma familiaridade a problemas cotidianos.
 
 \section{Objetivos Secundários}
 
-Para que o produto de ITSM - \textit{Information Technology Service Management} seja considerado viável, será necessário que as seguintes ferramentas sejam disponibilizadas as funcionalidades a seguir: 
-
-\subsection{Ferramenta de respostas rápidas para perguntas frequentes: FAQ - \textit{Frequently Asked Questions}}
-
-	Para a solução de FAQ, compreendeu-se a necessidade de desenvolvimento das ferramentas:
+	Para que o produto de ITSM - \textit{Information Technology Service Management} seja considerado viável, será necessário que as seguintes ferramentas sejam disponibilizadas as funcionalidades a seguir: 
 	
-	\begin{enumerate}
-		\item Modelo de árvore de decisão
-		
-		Realização de consultar em banco de dados relacional baseado em SQL - \textit{Server Query Language}, o qual localiza uma resposta de solução ao problema alegado.
-		
-		\item Tela inicial
-		
-		Implementação de ferramenta de busco para agregar na consulta otimizada afim de facilitar a procura de problemas relacionados.
-		
-		\item Adicionar Cookie de sessão para armazenar o comportamento do usuário. (verificar IP - \textit{Internet Protocol} - público e contexto LGPD - Lei Geral de Proteção de Dados)
-		
-		Armazenamento do IP público do usuário para identificar o seu comportamento no site, seguindo critérios de aceite aos termos e políticas condicionais no site, baseadas na LGPD.
-		
-		\item Cadastro no FAQ
-		
-		O cadastro no FAQ é realizado pelo próprio time da central de suporte técnico, quando identificam um novo problema que está sendo relatado com muita frequência, busca uma solução otimizada e disponibiliza no FAQ. 
-	\end{enumerate}
-
-\subsection{Login}
-
-	\begin{enumerate}
-		\item Login confiável por autorização de acesso
-	\end{enumerate}
-
-\subsection{Cadastros}
-
-\begin{enumerate}
-	\item Criação de cadastro de perfil
-	
-	Após a realização do cadastro com o mínimo necessários de informação o cliente poderá fazer um preenchimento complementar do seu perfil, demonstrando:
-	
-		\begin{enumerate}
-		\item Marcas e modelos de seus equipamentos;
-		\item Quantidade de usuários e nome dos usuários no local;
-		\item Software de que gosta de utilizar;
-		\item Outras opções.
-		\end{enumerate}
-	
-	\item Criação de cadastro de perfil técnico
-	
-	Após a realização do cadastro com o mínimo necessários de informação o cliente poderá fazer um preenchimento complementar do seu perfil, demonstrando
-	
-		\begin{enumerate}
-			
-			\item Marcas e modelos de seus equipamentos que atende;
-			\item Formação profissional;
-			\item Especialização;
-			\item Área que realizará o atendimento de preferência;
-			\item Outras opções. 
-			
-		\end{enumerate}
-	
-	\item Página de Cursos e Capacitação
-	
-		Os técnicos terão acesso a cursos que poderão realizar na plataforma afim de aprimorar o atendimento e capacitação e precisaram realizar uma avaliação técnica básica para realizar o atendimento.
-	
-\end{enumerate}
-
-\subsection{Visualização do perfil e escolha personalizada do técnico}
-
-\begin{enumerate}
-	
-	\item Visualização de cadastro de perfil
-	
-	O cliente poderá receber o perfil do técnico e sua média de avaliação e suas especialidades.
-	
-	\item Escolha de técnicos personalizada por critérios de avaliação
-	
-	O cliente poderá por meio de um plano especifico contratar um técnico com um perfil adequado a sua necessidade e baseado em sua avaliação.
-	
-\end{enumerate}
-
-\subsection{Agendamento de visita técnica}
-
-O cliente poderá por meio de um plano especifico contratar um técnico com um perfil adequado a sua necessidade e baseado em sua avaliação.
-
 	\begin{itemize}
-	
-	        \item Ter opção de botão dedicado para o usuário final abrir um chamado de visita técnica on site.
-	        
-	        Opção de chamado técnico facilitado, o cliente com um cadastro simples, sem necessidade de acessar o FAQ poderá solicitar um técnico até o local, sendo guiado pelo processo de agendamento.
-	        
-	        \item Agendamento por meio de raio de localidade
-	        
-	        Durante o processo de agendamento a escolha do técnico e feita é realizado por localidade do técnico registrado em uma determinada região.
-	        
+		
+		\item
+		Familiarizar o usuário com pouca habilidade para resolver problemas de soluções simples com computadores pra que possam ser independentes;
+		
+		\item
+		Facilitar a identificação e aplicação de resolução a problemas com computadores;
+		
+		\item
+		Orientar os gestores da ferramenta sobre as questões e dificuldades mais comuns;
+		
+		\item 
+		Facilitar o processo de resolução em caso de atendimento por terceiro credenciado
+		 
 	\end{itemize}
-
-\subsection{Operacional}
-
-	\begin{enumerate}
-		
-		\item Abertura do chamado técnico
-		
-		Todos os atendimentos técnicos realizados pela central de atendimento ou diretamente na visita técnica vão gerar uma abertura de um chamado técnico (incidente).
-		
-		\item Envio de foto do problema do equipamento
-		
-		O chamado possui campo para adicionar fotos do problema técnico alegado pelo cliente para armazenamento de histórico.
-		
-	\end{enumerate}
-
-\subsection{Planos de Compra}
-
-	\begin{enumerate}
-		
-		\item Free
-		
-		Usuário acessa a plataforma, navega pelos FAQs, podendo sanar suas dúvidas e resolver seus problemas por conta própria através da plataforma – Contém ADS.
-		
-		\item Basic
-		
-		Modelo de assinatura mensal onde o usuário paga um valor e terá 1 dispositivo vinculado à assinatura. Ao assinar, a equipe instalará os softwares para acesso remoto e, quando o usuário não conseguir resolver por conta própria o problema, será atendido via chat ou WhatsApp para resolução. Para atendimento técnico, os técnicos são escolhidos de forma aleatória dando preferência a região.
-		
-		\item Premium
-		
-		Modelo de assinatura mensal onde o usuário paga um valor e terá 5 dispositivos vinculado à assinatura. Ao assinar, a equipe instalará os softwares para acesso remoto e, quando o usuário não conseguir resolver por conta própria o problema, será atendido via chat ou WhatsApp. Para atendimento técnico, os técnicos são escolhidos de forma aleatória dando preferência a região e escolha de técnicos mais bem avaliados.
-		
-	\end{enumerate}
-
-\subsection{Avaliação da visita técnica.}
-
-	\begin{enumerate}
-		
-		\item Botão de Resolução (Sim ou Não)
-		
-		Após a conclusão da visita técnica aparecerá para o cliente uma pergunta se o problema foi resolvido com dois botões (Sim e Não), caso tenha resolvido apresentará a mensagem de dúvidas, sugestões ou reclamações. Em caso de não solução o incidente voltará a ser reportado para o time de atendimento técnico analisar o caso. 
-		
-		\item Avaliação da visita técnica
-		
-		Funcionalidade de avaliação da visita técnica do cliente com critérios de nota:(1 muito pouco satisfeito, 2 pouco satisfeito, 3 regular, 4 satisfeito, 5 muito satisfeito), o qual os técnicos mais bem avaliados terão mais chances de receber um contato de visita técnica. Existindo campos também para sugestões e reclamações.
-		
-	\end{enumerate}
-
-\subsection{Modo de visualização}
-
-	\begin{enumerate}
-	
-	\item Modo de aplicação em WEB
-	
-	O serviço será disponibilizado em formato de aplicação WEB acessível em qualquer navegador com interação facilitada.
-	
-	\item Avaliação da visita técnica.
-	
-	O serviço será disponibilizado em formato de aplicação WEB acessível em qualquer navegador com interação facilitada.
-		
-	\end{enumerate}
-
-\subsection{Avaliação de visita técnica e clientes}
-
-\begin{enumerate}
-	
-	\item Avaliação da visita técnica.
-	
-	Funcionalidade de avaliação da visita técnica do cliente com critérios de nota:(1 muito pouco satisfeito, 2 pouco satisfeito, 3 regular, 4 satisfeito, 5 muito satisfeito), o qual os técnicos mais bem avaliados terão mais chances de receber um contato de visita técnica. Existindo campos também para sugestões e reclamações.
-
-
-	\item Avaliação da visita técnica.
-	
-	Funcionalidade de avaliação da visita técnica do cliente com critérios de nota:(1 muito pouco satisfeito, 2 pouco satisfeito, 3 regular, 4 satisfeito, 5 muito satisfeito), o qual os técnicos mais bem avaliados terão mais chances de receber um contato de visita técnica. Existindo campos também para sugestões e reclamações.
-
-	\item Avaliação do cliente.
-	
-	Funcionalidade de avaliação da visita técnica do cliente com critérios de nota:(1 muito pouco satisfeito, 2 pouco satisfeito, 3 regular, 4 satisfeito, 5 muito satisfeito), opção de classificar o nível de conhecimento técnico (1 nenhum conhecimento, 2 poucos conhecimento, 3 regular, 4 bons conhecimentos, 5 conhecimentos avançados).
-
-\end{enumerate}
-
-\subsection{Relatórios}
-
-	\begin{enumerate}
-
-	\item Relatório de Incidentes (Classificação, gerencial, traçar perfil de recorrência de incidente e comportamento).
-	
-	Geração de relatório de incidentes de nível gerencial, com demonstração de informações de classificação, recorrência de incidentes e comportamento dos usuários do FAQ.
-	
-	\item Painel de indicadores
-	
-	Criação de painel de indicadores de consultas e comportamentos mais frequentes para melhoria da solução.
-
-	\end{enumerate}
-	
-\chapter[Tecnologias]{Tecnologias}
-
-\section{Modelo de trabalho}
-
-Considerando o prazo de entrega e metodologias de trabalho estudadas durante o curso, bem como de comum conhecimento profissional dos elementos do grupo, decidiu-se o emprego dos framework Kanban e Scrum para o desenvolvimento do projeto, alinhado {\`a}s práticas do DevOps.
-
-
-\section{Infra estrutura}
-
-A aplica{\c{c}}ão será mantida em ambiente cloud na modalidade de IAAS (Infrastructure as a Service, ou Infraestrutura como servi{\c{c}}o), utilizando os servi{\c{c}}os do provedor Microsoft Azure.
-
-\section{Back-end}
-
-Considerando a maturidade das bibliotecas da linguagem java, o amplo suporte que existe da comunidade e a experiência de desenvolvimento dos integrantes do grupo, foi escolhida a linguagem Java para sustentar a aplica{\c{c}}ão de back-end desenvolvido em Java e banco de dados MySql para persistência.
-
-\section{Front-end}
-
-O front-end será desenvolvido utilizando a biblioteca JavaScript React, empregando a linguagem typescript, HTML (hypertext markup language) e CSS (cascading style sheets).
-
-\section{Divisão da equipe}
-    \begin{table}[h!]
-	    \begin{tabular}{lccccc}
-    		 \textbf{Atividade} & \textbf{Henrique} & \textbf{Isabela} & \textbf{Mateus} & \textbf{Vinicius} & \multicolumn{1}{c}{\textbf{Welen}} \\
-    		 Front-End & \multicolumn{1}{l}{} & X & X & X & \\
-    		 Back-End & X & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \\
-    		 Banco de Dados & X & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & X & \\
-    		 Documentação e Modelagem & X & X & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \\
-    		 Vídeos & X & X & X & X & \multicolumn{1}{c}{X} \\
-    		 Blog & X & X & X & X & \multicolumn{1}{c}{X} 
-	    \end{tabular}
-    \end{table}
-	
-\chapter[Análise de mercado]{Análise de mercado}
-
-    Em pesquisa de mercado e concorrência, foram identificados os seguintes competidores:
-    
-    \begin{enumerate}
-        \item \href{https://hatron.com.br/}{Hatron}
-        
-        Ofertam terceirização de suporte \textit{help desk}, através de atendimento remoto e, quando necessário, envia técnicos para o local. Atendem demandas de rede, servidores, novos projetos de tecnologia da informação e consultoria. Atende apenas pessoas jurídicas.
-        
-        \item \href{https://www.mundoopen.com.br/helpdesk-para-empresas-sp-suporte-tecnico-em-ti.html}{Mundo Open Tecnologia}
-        
-        Oferecem atendimento personalizado atuando nas frentes de arquitetura, otimização de ambiente, \textit{help desk} e gerenciando a infraestrutura de tecnologia da informação. Atende apenas pessoas jurídicas.
-        
-        \item \href{https://answers.microsoft.com/pt-br?auth=1}{Fóruns Microsoft}
-        
-        Plataforma aberta e gratuita com grande base de conhecimentos por interação de usuários através de fórum, permite que o usuário busque discutir e consultar problemas e soluções para problemas enfrentados ao utilizar produtos Microsoft.
-        
-    \end{enumerate}
-
-    \begin{comment}
-    \section{Hatron}
-    Ofertam a terceirização de suporte \textit{help desk}, através de atendimento e, quando necessário, enviando técnicos para o ambiente local. Atendem demandas de rede, servidores, novos projetos de TI e consultoria. Atende pessoas jurídicas.
-    
-    \section{Mundo Open Tecnologia}
-    Oferecem atendimento personalizado, atuando nas frentes de arquitetura, otimização de ambiente, \textit{help desk} e gerenciando a infraestrutura de TI. Atende pessoas jurídicas.
-    
-    \section{Fóruns Microsoft}
-    Plataforma com grande base de conhecimentos, para que o usuário possa buscar erros nos produtos Microsoft e consiga ver problemas similares de outros usuários já resolvidos, ou ainda, incluir seu problema e aguardar um auxílio da comunidade. Serviço gratuito.
-    
-    \end{comment}
-    
-    
-    \section{Comparativo de concorrência}
-    É sabida a existência de outros concorrentes, sendo que reconhecemos estes como os que oferecem maior gama de serviços atendidos, servindo-nos para comparativo e entendimento de mercado.
-    
-    \begin{table}
-        \begin{tabular}{l c c c c}
-            \hline
-            Funcionalidade          & METAVERSO & Hatron & Mundo Open & Fóruns Microsoft \\
-            \hline
-            Acesso remoto           & Sim       & Sim   & Sim & Não \\
-            Área de parceiros   & Sim   & Não   & Não & Não \\
-            Área do usuário & Sim & Sim & Sim & Sim\\
-            Atende pessoa física & Sim & Não & Não & Sim\\
-            Atende pessoa jurídica & Sim & Sim & Sim & Sim\\
-            Atendimento 24/7 & Sim & Sim & Sim & Não\\
-            Atendimento personalizado & Sim & Sim & Sim & Não\\
-            Chat Online & Sim & Não & Sim & Não\\
-            Encaminhamento para técnicos & Sim & Sim & Sim & Não\\
-            Equipe técnica própria & Não & Sim & Sim & Sim\\
-            FAQ Gratuito & Sim & Não & Não & Sim\\
-            Valor mensal fixo & Sim & Sim & Sim & Não\\
-            \hline
-
-        \end{tabular}
-    \end{table}
-
-\chapter[Arquitetura da solução]{Arquitetura da solução}
-
-
-\includegraphics{arquitetura_v1.drawio.png}
-
-\section{Análise de Requisitos}
-Nesta etapa, a equipe inicia a elaboração com detalhamento das funcionalidades, regras e características que devem regir a aplicação.
-O P.O atribui valor ao produto, orientando o que deve ser entregue e o que é importante para o negócio, refinando os requisitos e os transformando em itens do Product Backlog.
-
-\subsection{Regras de Negócio}
-As regras de negócio nos servem para orientação quanto à modelagem, principais funcionalidades e restrições da aplicação. Dessa forma, as regras de negócio permitem que seja atribuído valor ao produto da maneira correta.  
-
-\begin{center}
-\begin{longtable}{|c|p{14cm}|}
-\hline
-Código & \multicolumn{1}{c|}{Descrição} \\ \hline
-\endfirsthead
-Código & \multicolumn{1}{c|}{Descrição} \\ \hline
-\endhead
-\multicolumn{2}{1}{Continua...}\\
-\endfoot
-\hline
-\multicolumn{2}{c}{Fonte: Os autores}\\
-\endlastfoot
-RN001 & Um usuário pode se cadastrar/autenticar utilizando sua conta Google ou email e senha \\ \hline
-RN002 & Não deve ser possível existir mais de um usuário com o mesmo e-mail e perfil(técnico/usuário) \\ \hline
-RN003 & O usuário pode acessar o FAQ sem necessidade de um cadastro. \\ \hline
-RN004 & Os problemas relatados no FAQ devem estar associados a uma determinada categoria de problemas, consequentemente a uma subcategoria. \\ \hline
-RN005 & Os administradores da aplicação e usuários de perfil técnico devem poder cadastrar novas soluções \\ \hline
-RN006 & Os administradores da aplicação devem poder remover soluções inválidas \\ \hline
-RN007 & Usuários clientes devem ter um mínimo de dados cadastrados para serem devidamente atendidos (País, Estado, Município, Logradouro, CEP, Número, Complemento), e-mail, telefone. \\ \hline
-RN008 & O usuário pode alterar seus dados a qualquer momento na área de usuário. \\ \hline
-RN009 & O usuário cliente poderá extrair relatórios referentes aos seus atendimentos remotos, presenciais e histórico de pagamento. \\ \hline
-RN010 & O usuário Free não deve ter acesso ao Chat Online (Recurso Premium) \\ \hline
-RN011 & O usuário assinante deverá ter acesso ao Chat Online e atendimento técnico remoto \\ \hline
-RN012 & O usuário assinante comercial poderá incluir outros usuários em sua subscrição \\ \hline
-RN013 & Todos os usuários cadastrados devem poder abrir chamado técnico externo \\ \hline
-RN014 & O usuário cliente poderá escolher a forma de atendimento desejado para o chamado remoto (e-mail, chat online, whats app, telefone). \\ \hline
-RN015 & O usuário técnico da equipe, durante o chat, deverá ter acesso aos dados do usuário cliente para melhor atendimento. \\ \hline
-RN016 & O usuário cliente, ao optar por abrir um chamado técnico presencial, poderá escolher o técnico que o atenderá, onde exibiremos os técnicos mais próximos geograficamente e destacaremos os melhores avaliados. \\ \hline
-RN017 & O usuário cliente deve saber o custo aproximado do reparo para o chamado em questão, antes de avançar com o mesmo. \\ \hline
-RN018 & O usuário cliente poderá escolher entre ir até o técnico ou solicitar a visita do mesmo in loco (com os devidos acréscimos de custo) \\ \hline
-RN019 & O usuário cliente poderá escolher a visita de um técnico específico, ou deixar para que a ferramenta indique. Nesse caso, a ferramenta deve abrir o chamado de forma geral e os técnicos poderão pegar o chamado para eles. \\ \hline
-RN020 & O usuário técnico deve conter o mínimo de dados para efetuar o cadastro que são: endereço: (País, Estado, Município, Logradouro, CEP, Número, Complemento), e-mail, telefone, Nome/Razão social, CPF/CNPJ, Inscrição Estadual ou Isento, Dados Bancários(Tipo de conta C/C ou C/P, número do Banco, número da Agência, número da Conta, nome do titular da conta). \\ \hline
-RN021 & Em caso de dados faltantes, o usuário técnico fica inapto a atender chamados \\ \hline
-RN022 & O usuário técnico deve ter acesso a um portal específico para visualização de chamados em aberto, histórico de atendimento, pagamentos, avaliações. \\ \hline
-\end{longtable}
-\end{center}
-
-\subsection{Requisitos Funcionais}
-Os requisitos funcionais explicitam o que a aplicação deve fazer, sem levar em consideração a maneira que será executado.
-
-\begin{center}
-\begin{longtable}{|1|p{6cm}|p{6cm}|}
-\hline
-\multicolumn{1}{|c|}{Identificador} & \multicolumn{1}{c|}{Nome} & \multicolumn{1}{c|}{Descrição} \\ \hline
-\endfirsthead
-\hline
-\multicolumn{1}{|c|}{Identificador} & \multicolumn{1}{c|}{Nome} & \multicolumn{1}{c|}{Descrição} \\ \hline
-\endhead
-\hline
-\multicolumn{3}{1}{Continua...}\\
-\endfoot
-\hline
-\multicolumn{3}{c}{Fonte: Os autores}\\
-\endlastfoot
-RF01 & Meios de contato multi canal para abertura de chamado & Contempla chat e formulários para detalhamento de informações de problemas não resolvidos pelo FAQ \\ \hline
-RF02 & Interface intuitiva para identificação e resolução de problemas & Sistema deve exibir página de busca para resolução de problemas frequentes (FAQ) com interface amigável ao usuário final \\ \hline
-RF03 & Abertura de chamado com detalhamento por extenso e anexação de imagens & Clientes devem conseguir detalhar o problema que não conseguiram resolver pelo FAQ \\ \hline
-RF04 & Acompanhamento do fluxo de navegação do usuário para compor análise de funil & Deve acontecer acompanhamento do fluxo de navegação do cliente para compor o histórico de navegação do chamado, para enriquecer os assuntos que podem colaborar para a auto resolução do problema \\ \hline
-RF05 & Cadastro de técnicos e qualificações na plataforma & O sistema deve permitir que tecnicos consigam adicionar dados de identificação e qualificação na plataforma \\ \hline
-RF06 & Registro de satisfação de atendimento & Após o atendimento do técnico, deve ser permitido que o usuário responda a uma avaliação do atendimento prestado pelo técnico \\ \hline
-RF07 & Registro de avaliação do atendimento & Após o atendimento, o técnico deve responder a questionário de avaliação do atendimento \\ \hline
-RF08 & Cadastro orientado a incrementação e atualização de dados & Clientes devem conseguir cadastrar-se apenas com integração de dados de serviços de autorização e adição opcional de mais detalhes sobre equipamentos e fluência em dispositivos computacionais. \\ \hline
-RF09 & Disponibilizar histórico de incidentes relacionados ao problema reclamado do cliente para o técnico & Técnico deve ter disponível o histórico de problemas e tratativas que foram aplicadas para um cliente, ao realizar atendimento. \\ \hline
-RF10 & Enriquecimento de base de respostas & Usuários da plataforma podem elaborar perguntas e respostas e contribuir para o crescimento da base de respostoas. \\ \hline
-RF11 & Interface de administração com relatórios e indicadores para monitoração de incidentes e resoluções & Tem o objetivo de centralizar e indicar os incidentes que vêm crescendo para orientar o crescimento de base de respostas. \\ \hline
-RF12 & Interface de cadastro de instruções para o FAQ & Sistema deve permitir que novas soluções sejam criadas, editadas, suprimidas ou deletadas \\ \hline
-RF13 & Interface de relatórios de atendimentos e buscas passadas & O cliente deve ser capaz de verificar as soluções que mais acessa, histórico de pagamentos e histórico de atendimentos) \\ \hline
-RF14 & Chamados podem gerar atendimentos presenciais & Sistema deve apresentar interface de disponibilidade de horários para agendamento a partir da agenda de disponibilidade de técnicos \\ \hline
-\end{longtable}
-\end{center}
-
-\subsection{Requisitos não funcionais}
-Requisitos não funcionais referem-se às características do sistema, que podem até não ser perceptíveis para o usuário
-
-\begin{center}
-\begin{longtable}{|c|p{4cm}|p{10cm}|}
-\hline
-Identificador & Subtipo & Consideração \\ \hline
-\endfirsthead
-Identificador & Subtipo & Consideração \\ \hline
-\endhead
-\hline
-\multicolumn{3}{1}{Continua...}\\
-\endfoot
-\hline
-\multicolumn{3}{c}{Fonte: Os autores}\\
-\endlastfoot
-RNF01 & Tempo de resposta & \begin{tabular}[c]{@{}l@{}}ideal: "0.1 s" \\ aceitavel: "1 s" \\ referencia: \\ "https://www.nngroup.com/articles/website-response-\\times/"\end{tabular} \\ \hline
-RNF02 & Velocidade de execução & Usuário não deve demorar mais que 10 segundos para identificar a seção relevante para sua busca \\ \hline
-RNF03 & Portabilidade & Java 11 e React \\ \hline
-RNF04 & Consistência & Serviço gerenciado Azure App Service \\ \hline
-RNF05 & Confiabilidade & Suporte do serviço cloud Azure App Service (99,95\% uptime) \\ \hline
-RNF06 & Segurança & Integração de serviços de autorização de acesso \\ \hline
-RNF07 & Infraestrutura & Cloud \\ \hline
-RNF08 & Sistema operacional compatível & Serviço gerenciado \\ \hline
-RNF09 & Conexão & Suporte do serviço cloud Azure App Service (99,95\% uptime) \\ \hline
-RNF10 & Criptografia usada pela empresa & \\ \hline
-RNF11 & Linguagem de progração requisitada & Java e React \\ \hline
-RNF12 & Localização geográfica em que será usado & Brasil \\ \hline
-RNF13 & Legislação & Brasil, em especial LGPD \\ \hline
-RNF14 & Sistemas & Linux container \\ \hline
-RNF15 & Política de proteção de dados & LGPD \\ \hline
-\end{longtable}
-\end{center}
-
-\subsection{Caso de Uso}
-Este diagrama mostra a ferramenta de chamados para pessoas físicas e pequenas empresas, contendo três atores (Cliente, Atendimento Técnico e Técnico Parceiro), oito casos de uso (Login, FAQ, Chat, Avaliação, Agendamento Técnico Externo, Aumenta Relevância de Solução, Busca Google e Fim de Atendimento), dez dependências e as associações entre os atores e os casos de uso.
-
-\begin{figure}[h]
-\caption{Caso de Uso}
-\centering 
-\includegraphics[c]{LaTeX/metaversoIFSP/anexos/caso de uso.png} 
-    \label{figura:caso de uso}
-\end{figure}
-
-\subsubsection{Caso de uso: Login}
-Visão Geral: O cliente realiza o login para efetuar a busca de seu problema no FAQ. O FAQ possui um filtro por categoria e subcategoria de problemas exibindo um informativo do que foi buscado pelo cliente. 
-
-\subsubsection{Caso de uso: FAQ}
-Visão Geral: Ao escolher a categoria do problema no FAQ, é feito uma busca para exibir a solução. O cliente que é assinante, caso não encontrar seu problema no FAQ, poderá encontrar a solução no chat de atendimento técnico.
-
-\subsubsection{Caso de uso: Chat}
-Visão Geral: O chat tem a finalidade de ajudar o cliente com interação humana para solucionar o problema. Quando a resolução do problema é resolvida via chat, o cliente pode realizar uma avaliação de atendimento.
-
-\subsubsection{Caso de uso: Avaliação}
-Visão Geral: O atendimento do chat é finalizado, um formulário de avaliação é exibido para o cliente realizar o preenchimento avaliativo referente ao atendimento.
-
-\subsubsection{Caso de uso: Agendamento Técnico Remoto}
-Visão Geral: O agendamento técnico remoto permite que o cliente possa efetuar um agendamento para uma visita do técnico parceiro. Quando o problema não é solucionado via chat, o cliente pode abrir um chamado descrevendo o problema e realizar o agendamento da visita escolhendo data, horário e técnicos disponíveis.
-
-\subsubsection{Caso de uso: Busca Google}
-Visão Geral: Ao fim do FAQ, para os usuários que não são assinantes, exibiria a mensagem de “Isso pode te ajudar”, sendo uma busca no Google com o texto que o cliente informou no final ao resumir seu problema.
-
-\subsubsection{Caso de uso: Aumenta Relevância da Solução}
-Visão Geral: O aumenta relevância da solução tem como objetivo de pontuar as soluções que estarão no FAQ. Ao resolver o problema mostrando a solução no FAQ, o cliente avalia se aquela solução foi positiva ou negativa. Com esses dados, quando o cliente for escolher aquela determinada categoria, será ranqueado pela relevância.
-
-\subsubsection{Caso de uso: Fim de Atendimento}
-Visão Geral: O cliente quando soluciona seu problema via FAQ, é finalizado o atendimento.
-
-\section{Modelagem}
-Com base no apresentado anteriormente, elaboramos a Modelagem do projeto, visando detalhar tecnicamente a aplicação.
-
-\subsection{Modelo Entidade-Relacionamento (MER)}
-Utilizado para projetar banco de dados relacionais, o MER apresenta a relação de objetos reais. Foi utilizada a notação de Peter Chen, criador do modelo.
-
-\begin{figure}[h]
-\caption{MER - Usuários e derivados}
-\centering 
-\includegraphics[width=15cm]{LaTeX/metaversoIFSP/anexos/Modelo Conceitual - Usuários e derivados.png} 
-    \label{figura:mer-usuarios}
-\end{figure}
-
-\subsection{Diagrama Entidade-Relacionamento (DER)}
-A partir do MER, obtemos os relacionamentos entre os objetos da aplicação, podendo seguir com o DER, para desenvolvimento do banco de dados.
-\begin{figure}[h]
-\caption{DER - Usuários e derivados}
-\centering 
-\includegraphics[width=15cm]{LaTeX/metaversoIFSP/anexos/DER - Usuários e Derivados.png} 
-    \label{figura:der-usuarios}
-\end{figure}
-
-\chapter{Links do Projeto}
-
-\newcommand{\urlyoutube}{https://www.youtube.com/channel/UCNXlPi5ADeGx1tZbMo_xOqw/}
-\newcommand{\urlblog}{https://metaversoifsp.blogspot.com/}
-\newcommand{\urlsvn}{https://svn.spo.ifsp.edu.br/viewvc/A6PGP/S202201-PI-NOT/Metaverso/}
-\newcommand{\urlgithub}{https://github.com/MetaversoIFSP/}
-
-\section{QR Code: Canal Youtube}
-    \begin{figure}
-        \psbarcode{https://www.youtube.com/channel/UCNXlPi5ADeGx1tZbMo_xOqw/}{}{qrcode}
-    \end{figure}
-
-
-%\section{Justificativa}
-
-%\section{Estrutura do Estudo}
-
-%\lipsum[3-5]
-%Teste de citação para gerar referências no modelo.. \citeauthor{SCRUMGUIDE:2013}
-
-% ----------------------------------------------------------
-% Referências bibliográficas
-% ----------------------------------------------------------
-\bibliography{referencias,exemplos/abntex2-doc-abnt-6023}
 
 \end{document}
